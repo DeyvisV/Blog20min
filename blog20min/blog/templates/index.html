@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+</head>
+<body>
+	<h1>Blog</h1>
+	{% for entry in object_list %}
+		<h2> <a href="/entry/{{entry.slug}}/">{{ entry.title }}</a></h2>
+		<p>{{ entry.content }}</p>
+	{% endfor %}
+</body>
+</html>
